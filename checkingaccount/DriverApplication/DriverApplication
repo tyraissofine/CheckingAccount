@@ -1,0 +1,22 @@
+from CheckingAccount import CheckingAccount
+
+user = CheckingAccount("Tyra", "Honolulu, HI", "1234567", 5000)
+
+print("1-Debit")
+print("2-Credit")
+print("3-View Balance")
+print("q-Quit")
+while True:
+    choice = input("Which option are you viewing? : ")
+    if choice == "1":
+        amount = int(input("Enter Amount : "))
+        user.debit(amount)
+    elif choice == "2":
+        amount = int(input("Enter Amount : "))
+        user.credit(amount)
+    elif choice == "3":
+        user.getBalance()
+    elif choice == "q":
+        print('Goodbye, try again later.')
+    else:
+        break

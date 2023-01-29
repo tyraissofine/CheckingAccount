@@ -1,0 +1,17 @@
+class CheckingAccount:
+    def __init__(self, name, address, accountNumber, balance):
+        self.name = name
+        self.address = address
+        self.accountNumber = accountNumber
+        self.__balance = balance
+
+    def debit(self, amount):
+        self.__balance -= amount
+        print("Balance = ", self.__balance)
+
+    def credit(self, amount):
+        self.__balance += amount
+        print("Balance = ", self.__balance)
+
+    def getBalance(self):
+        print("Balance = ", self.__balance)
